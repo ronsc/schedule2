@@ -4,7 +4,7 @@
   "description": "Project for test Travis-ci on Github.com",
   "main": "app/app.js",
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
