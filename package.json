@@ -1,0 +1,26 @@
+{
+  "name": "Schedule2.0",
+  "version": "2.0.0",
+  "description": "Project for test Travis-ci on Github.com",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronsc/schedule.git"
+  },
+  "author": "ronsc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronsc/schedule/issues"
+  },
+  "homepage": "https://github.com/ronsc/schedule",
+  "devDependencies": {
+    "karma-jasmine": "~0.1.5",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma": "~0.10.9",
+    "grunt-karma": "~0.6.2",
+    "grunt-cli": "~0.1.13"
+  }
+}
