@@ -2,8 +2,9 @@
   "name": "Schedule2.0",
   "version": "2.0.0",
   "description": "Project for test Travis-ci on Github.com",
-  "main": "app/app.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "grunt"
   },
   "repository": {
@@ -22,5 +23,9 @@
     "karma": "~0.10.9",
     "grunt-karma": "~0.6.2",
     "grunt-cli": "~0.1.13"
+  },
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
   }
 }
