@@ -6,3 +6,6 @@ Project for test Travis-ci on Github.com
 - [AngularJs] (https://angularjs.org/)
 - [Angular-Mocks] (https://github.com/angular/bower-angular-mocks)
 - [Jasmine] (http://jasmine.github.io/)
+
+## Deploy
+Auto Deploy to heroku.com on build pass
