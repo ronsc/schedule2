@@ -1,4 +1,4 @@
-schedule [![Build Status](https://travis-ci.org/ronsc/schedule.svg)](https://travis-ci.org/ronsc/schedule) [![Build Status](https://drone.io/github.com/ronsc/schedule/status.png)](https://drone.io/github.com/ronsc/schedule/latest)
+schedule [![Build Status](https://travis-ci.org/ronsc/schedule.svg)](https://travis-ci.org/ronsc/schedule) [![Build Status](https://drone.io/github.com/ronsc/schedule/status.png)](https://drone.io/github.com/ronsc/schedule/latest)  ![Dependency Status](https://david-dm.org/ronsc/schedule.svg)
 ===
 Project for test Travis-ci on Github.com
 
