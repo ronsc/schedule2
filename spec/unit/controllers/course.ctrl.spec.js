@@ -1,4 +1,4 @@
-describe('CourseController', function() {
+describe('CourseCtrl', function() {
 	var $controller, CourseController, $socpe;
 
 	beforeEach(module('ScheduleApp'));
@@ -9,7 +9,7 @@ describe('CourseController', function() {
 
 	beforeEach(function() {
 		$scope = {};
-		CourseController = $controller('CourseController', {
+		CourseController = $controller('CourseCtrl', {
 			$scope: $scope
 		});
 	});
