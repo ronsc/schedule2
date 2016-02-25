@@ -9,3 +9,18 @@ Project for test Travis-ci on Github.com
 
 ## Deploy
 Auto Deploy to heroku.com on build pass
+
+## Developer
+``` 
+$ git clone https://github.com/ronsc/schedule.git && cd schedule
+```
+```
+$ npm install -g bower
+```
+```
+$ npm install
+```
+* Testing
+```
+$ npm test
+```
