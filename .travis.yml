@@ -1,6 +1,9 @@
 language: node_js
 node_js: 
  - "4.3.1"
-before_script:
+before_install:
  - npm install -g bower
- - bower install
+install:
+ - npm install
+script:
+ - npm test
