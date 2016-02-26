@@ -20,6 +20,13 @@ $ npm install -g bower
 ```
 $ npm install
 ```
+```
+$ bower install
+```
+* Run Webapp
+```
+$ npm start
+```
 * Testing
 ```
 $ npm test
