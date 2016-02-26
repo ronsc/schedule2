@@ -2,15 +2,11 @@ schedule [![Build Status](https://travis-ci.org/ronsc/schedule.svg)](https://tra
 ===
 Project for test Travis-ci on Github.com
 
-## Dependencies
-- [AngularJs] (https://angularjs.org/)
-- [Angular-Mocks] (https://github.com/angular/bower-angular-mocks)
-- [Jasmine] (http://jasmine.github.io/)
-
-## Deploy
+## Deploy ##
 Auto Deploy to heroku.com on build pass
+> URL : [https://sutschedule.herokuapp.com] (https://sutschedule.herokuapp.com/)
 
-## Developer
+## Developer ##
 ``` 
 $ git clone https://github.com/ronsc/schedule.git && cd schedule
 ```
@@ -20,13 +16,13 @@ $ npm install -g bower
 ```
 $ npm install
 ```
-```
-$ bower install
-```
+
 * Run Webapp
 ```
 $ npm start
 ```
+> URL : [http://localhost:2222] (http://localhost:2222)
+
 * Testing
 ```
 $ npm test
