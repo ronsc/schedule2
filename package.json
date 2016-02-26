@@ -2,9 +2,9 @@
   "name": "Schedule2.0",
   "version": "2.0.0",
   "description": "Project for test Travis-ci on Github.com",
-  "main": "app.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node src/main.js",
     "test": "node node_modules/.bin/gulp test",
     "postinstall": "bower install"
   },
@@ -29,6 +29,11 @@
     "phantomjs-prebuilt": "^2.1.4"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "bluebird": "^3.3.3",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "mysql": "^2.10.2",
+    "pg-promise": "^3.2.3"
   }
 }
