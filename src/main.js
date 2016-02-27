@@ -7,15 +7,11 @@
 	var app = express();
 	var dir = __dirname;
 
-	app.set('port', (process.env.PORT || 2222));
+	app.set('port', (process.env.PORT || 8080));
 
 	app.use(bodyParser.json());
-
-	// main route
-	app.get('/', function(req, res) {
-		res.sendfile('app/index.html');
-		// res.send('schedule on Heroku.com');
-	});
+	// serv static content
+	app.use(express.static(__dirname + '/../app'));
 
 	// dynamic routes
 	fs.readdirSync(dir + '/routes').forEach(function(file) {
@@ -25,6 +21,6 @@
 	});
 
 	app.listen(app.get('port'), function() {
-		console.log('Node app is running on port', app.get('port'));
+		console.log('ScheduleAppV2 running on', app.get('port'));
 	});
 })();

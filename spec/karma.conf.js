@@ -6,8 +6,8 @@ module.exports = function(config) {
 
 		files: [
 			// vendor files
-			'bower_components/angular/angular.min.js',
-			'bower_components/angular-mocks/angular-mocks.js',
+			'app/bower_components/angular/angular.min.js',
+			'app/bower_components/angular-mocks/angular-mocks.js',
 
 			// src files
 			'app/app.modules.js',
