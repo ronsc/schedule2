@@ -5,8 +5,9 @@
   "main": "src/main.js",
   "scripts": {
     "start": "node src/main.js",
-    "test": "node node_modules/.bin/gulp test",
-    "postinstall": "bower install"
+    "test": "node_modules/.bin/gulp test",
+    "dev": "node_modules/.bin/live-server app --port=5555",
+    "postinstall": "bower install && jade app/index.jade -P"
   },
   "repository": {
     "type": "git",
@@ -32,11 +33,12 @@
     "phantomjs-prebuilt": "^2.1.4"
   },
   "dependencies": {
-    "bower": "^1.7.7",
     "bluebird": "^3.3.3",
     "body-parser": "^1.15.0",
+    "bower": "^1.7.7",
     "express": "^4.13.3",
     "fs": "0.0.2",
+    "jade": "^1.11.0",
     "mysql": "^2.10.2",
     "pg-promise": "^3.2.3"
   }

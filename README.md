@@ -9,14 +9,23 @@ Auto Deploy to heroku.com on build pass
 $ git clone https://github.com/ronsc/schedule.git && cd schedule
 ```
 ```
+$ npm install -g bower jade gulp
+```
+```
 $ npm install
 ```
 
-* Run Webapp
+* Preview Webapp
 ```
 $ npm start
 ```
-> URL : [http://localhost:2222](http://localhost:2222)
+> URL : [http://localhost:8080](http://localhost:8080)
+
+* Dev Server (live-server)
+```
+$ npm run dev
+```
+> URL : [http://127.0.0.1:5555](http://127.0.0.1:5555)
 
 * Testing
 ```
