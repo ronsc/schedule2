@@ -4,7 +4,10 @@
 	// Main App
 	angular
 		.module('ScheduleApp', [
-			'app.course'
+			'app.core',
+			'app.course',
+
+			'ngMaterial'
 		]);
 
 	// Components App
