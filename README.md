@@ -23,11 +23,15 @@ $ npm start
 
 * Dev Server (live-server)
 ```
-$ npm run dev
+$ npm run dev:server
 ```
 > URL : [http://127.0.0.1:5555](http://127.0.0.1:5555)
 
 * Testing
 ```
 $ npm test
+```
+* Developer Testing
+```
+$ npm run dev:test
 ```

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/main.js",
     "test": "node_modules/.bin/gulp test",
-    "dev": "node_modules/.bin/live-server app --port=5555",
+    "dev:server": "node_modules/.bin/live-server app --port=5555",
+    "dev:test": "node_modules/.bin/gulp tdd",
     "postinstall": "bower install && jade app/index.jade -P"
   },
   "repository": {
