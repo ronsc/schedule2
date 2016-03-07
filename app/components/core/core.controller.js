@@ -14,7 +14,8 @@
 
 
 		function goLogin() {
-			$location.path('login', {name: 'ronsc'});
+			console.info('goLogin');
+			// $location.path('login', {name: 'ronsc'});
 		}
 	}
 })();
