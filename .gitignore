@@ -1,4 +1,8 @@
+# dependencies
 bower_components
 node_modules
 
-requirements
+# html file
+app/*.html
+app/commons/*.html
+app/components/**/*.html
