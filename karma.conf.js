@@ -1,6 +1,6 @@
 module.exports = function(config) {
 	config.set({
-		basePath: '../',
+		basePath: '',
 		
 		frameworks: ['jasmine'],
 
@@ -10,11 +10,13 @@ module.exports = function(config) {
 			'app/bower_components/angular-mocks/angular-mocks.js',
 
 			// src files
+			'app/components/**/*.module.js',
+			'app/components/**/*.config.js',
+			'app/components/**/*.controller.js',
 			'app/app.modules.js',
-			'app/components/**/*.js',
 
 			// spec files
-			'spec/unit/controllers/*.spec.js'
+			'app/components/**/*.spec.js',
 		],
 
 		browsers: ['PhantomJS'],

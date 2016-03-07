@@ -8,7 +8,8 @@
     "test": "node_modules/.bin/gulp test",
     "dev:server": "node_modules/.bin/live-server app --port=5555",
     "dev:test": "node_modules/.bin/gulp tdd",
-    "postinstall": "bower install && jade app/index.jade -P"
+    "dev:jade": "node_modules/.bin/jade app/index.jade app/components -w -P",
+    "postinstall": "bower install && jade app/index.jade app/components -P"
   },
   "repository": {
     "type": "git",

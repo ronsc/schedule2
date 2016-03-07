@@ -1,17 +1,14 @@
 (function() {
 	'use strict';
 
-	// Main App
 	angular
 		.module('ScheduleApp', [
+			// angular module
+			'ngRoute',
+			// components module
 			'app.core',
 			'app.course',
-
+			// third party module
 			'ngMaterial'
 		]);
-
-	// Components App
-	angular
-		.module('app.course', []);
-	
 })();

@@ -5,10 +5,16 @@
 		.module('app.core')
 		.controller('CoreController', CoreController);
 
-	CoreController.$inject = [];
+	CoreController.$inject = ['$location'];
 
-	function CoreController() {
+	function CoreController($location) {
 		var vm = this;
 
+		vm.goLogin = goLogin;
+
+
+		function goLogin() {
+			$location.path('login', {name: 'ronsc'});
+		}
 	}
 })();
