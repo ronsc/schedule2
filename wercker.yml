@@ -8,7 +8,7 @@ build:
     # A step that executes `npm test` command
     - script:
         name: install test utilities
-        code: sudo npm install -g gulp
+        code: npm install gulp
     - npm-test
 
     # A custom script step, name value is used in the UI
