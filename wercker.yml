@@ -9,7 +9,7 @@ build:
     - script:
         name: install test utilities
         code: |
-          sudo npm install -g gulp
+          npm install gulp
           gulp test
     #- npm-test
 
