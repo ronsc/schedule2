@@ -20,7 +20,6 @@
     "@angular/platform-browser": "2.0.0",
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/router": "3.0.0",
-    "@angular2-material/toolbar": "^2.0.0-alpha.8-2",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.6",
     "@types/request": "0.0.30",
     "angularfire2": "^2.0.0-beta.5",
