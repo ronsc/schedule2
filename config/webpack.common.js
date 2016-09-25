@@ -36,6 +36,11 @@ module.exports = {
                 test: /\.css$/,
                 include: helpers.root('src', 'app'),
                 loader: 'raw'
+            },
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loaders: ['raw-loader', 'sass-loader']
             }
         ]
     },
@@ -47,6 +52,13 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
+        }),
+
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery',
+            "window.Tether": 'tether'
         })
     ]
 };
