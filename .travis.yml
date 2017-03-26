@@ -2,9 +2,10 @@ dist: trusty
 sudo: required
 language: node_js
 node_js:
-  - "6"
+  - "6.9"
 os:
   - linux
+
 before_install:
     # Run chrome on travis
     - export DISPLAY=:99.0
@@ -13,10 +14,14 @@ before_install:
     - echo "--no-sandbox" > ~/.config/chromium-flags.conf
 install:
     - npm install
+
 script:
     - npm test -- --single-run
+
+before_deploy:
+    - npm run build -- --prod
 deploy:
   provider: firebase
   token:
-    secure: ${FIREBASE_TOKEN}
-  project: "schedule2"
+    secure: "${FIREBASE_TOKEN}"
+  project: "schedule2-fcf72"
