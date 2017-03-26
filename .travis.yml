@@ -7,19 +7,19 @@ os:
   - linux
 
 before_install:
-    # Run chrome on travis
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
-    - export CHROME_BIN=chromium-browser
-    - echo "--no-sandbox" > ~/.config/chromium-flags.conf
+  # Run chrome on travis
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - export CHROME_BIN=chromium-browser
+  - echo "--no-sandbox" > ~/.config/chromium-flags.conf
 install:
-    - npm install
+  - npm install
 
 script:
-    - npm test -- --single-run
+  - npm test -- --single-run
 
 before_deploy:
-    - npm run build -- --prod
+  - npm run build -- --prod
 deploy:
   provider: firebase
   token:
