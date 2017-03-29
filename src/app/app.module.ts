@@ -21,11 +21,11 @@ const appRoutes: Routes = [
   { path: '**', component: PageNotFoundComponent }
 ];
 export const firebaseConfig = {
-  apiKey: '<your-key>',
-  authDomain: '<your-project-authdomain>',
-  databaseURL: '<your-database-URL>',
-  storageBucket: '<your-storage-bucket>',
-  messagingSenderId: '<your-messaging-sender-id>'
+  apiKey: 'AIzaSyCv9lUkasSL6ehYyxNpExS07Xl1lNO6GXU',
+  authDomain: 'schedule2-fcf72.firebaseapp.com',
+  databaseURL: 'https://schedule2-fcf72.firebaseio.com',
+  storageBucket: 'schedule2-fcf72.appspot.com',
+  messagingSenderId: '657536714769'
 };
 
 @NgModule({
