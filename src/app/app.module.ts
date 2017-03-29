@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,9 +17,16 @@ const appRoutes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'main', component: MainComponent },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
+export const firebaseConfig = {
+  apiKey: 'AIzaSyCv9lUkasSL6ehYyxNpExS07Xl1lNO6GXU',
+  authDomain: 'schedule2-fcf72.firebaseapp.com',
+  databaseURL: 'https://schedule2-fcf72.firebaseio.com',
+  storageBucket: 'schedule2-fcf72.appspot.com',
+  messagingSenderId: '657536714769'
+};
 
 @NgModule({
   declarations: [
@@ -33,7 +41,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
