@@ -27,5 +27,5 @@ script:
   - yarn run test:ci
 
 after_success:
-  - yarn run build:prod
-  - firebase deploy --token $FIREBASE_TOKEN
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then yarn run build:prod; fi
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then firebase deploy --token $FIREBASE_TOKEN; fi
