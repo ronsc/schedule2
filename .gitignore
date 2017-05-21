@@ -43,3 +43,6 @@ Thumbs.db
 
 # Firebase
 firebase-debug.log
+
+# Yarn
+yarn-error.log
