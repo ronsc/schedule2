@@ -1,0 +1,40 @@
+<nav class="nav has-shadow">
+    <div class="container">
+        <div class="nav-left">
+            <a
+                class="nav-item"
+                routerLink="/"
+            >
+                <h1 class="title">{{ title }}</h1>
+            </a>
+        </div>
+        <span class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+            <a
+                class="nav-item is-tab"
+                routerLink="/home"
+                routerLinkActive="is-active"
+            >
+                Home
+            </a>
+            <a
+                class="nav-item is-tab"
+                routerLink="/login"
+                routerLinkActive="is-active"
+            >
+                Sign in
+            </a>
+            <a
+                class="nav-item is-tab"
+                routerLink="/register"
+                routerLinkActive="is-active"
+            >
+                Sign up
+            </a>
+        </div>
+    </div>
+</nav>
