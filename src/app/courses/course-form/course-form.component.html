@@ -1,0 +1,51 @@
+<div style="padding: 15px 0 15px 15px;">
+    <p class="title is-4">
+        แผนการเรียน
+        <small>2560/1</small>
+    </p>
+
+    <div class="field">
+        <label class="label">สร้างด่วน</label>
+        <p class="control">
+            <textarea
+                #pc
+                class="textarea"
+                placeholder="วางข้อมูลที่นี่"
+                style="height: 250px;"
+                [formControl]="parseControl"
+                (click)="pc.select();"
+            ></textarea>
+        </p>
+    </div>
+
+    <div class="field is-grouped">
+        <p class="control">
+            <button class="button is-primary">เพิ่ม</button>
+        </p>
+        <p class="control">
+            <button class="button">ยกเลิก</button>
+        </p>
+    </div>
+
+    <div
+        class="card"
+        *ngIf="data"
+    >
+        <div
+            class="card-content"
+            style="padding: 1rem;"
+        >
+            <div class="content">
+                <small>
+                    รหัสวิชา: {{ data?.code }}
+                    <br>
+                    ชื่อรายวิชา: {{ data?.name }}
+                    <br>
+                    หน่วยกิต: {{ data?.unit }}
+                    <br>
+                    เวลา: {{ data?.dateTime | json }}
+                </small>
+            </div>
+        </div>
+    </div>
+</div>

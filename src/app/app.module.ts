@@ -6,6 +6,7 @@ import { HeaderComponent } from './shared/layout';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { NotFoundModule } from './not-found/not-found.module';
+import { CoursesModule } from './courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NotFoundModule } from './not-found/not-found.module';
     BrowserModule,
     HomeModule,
     NotFoundModule,
+    CoursesModule,
     AppRoutingModule,
   ],
   providers: [],
