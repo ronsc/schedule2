@@ -9,8 +9,7 @@ export class CourseIframeComponent implements OnInit {
   /**
   * https://stackoverflow.com/questions/38037760/how-to-set-iframe-src-in-angular-2-without-causing-unsafe-value-exception
   */
-  // src = 'http://reg6.sut.ac.th/registrar/class_info.asp';
-  src = 'http://reg6.sut.ac.th/registrar/class_info_1.asp?coursestatus=O00&facultyid=all&maxrow=50&acadyear=2559&semester=1&CAMPUSID=&LEVELID=&coursecode=523*&coursename=&cmd=2';
+  src = 'http://reg6.sut.ac.th/registrar/class_info.asp';
   height = 400;
 
   /**
