@@ -1,56 +1,63 @@
-<nav class="nav has-shadow">
-    <div class="container">
-        <div class="nav-left">
+<div class="container">
+    <nav class="navbar">
+        <div class="navbar-brand">
             <a
-                class="nav-item"
+                class="navbar-item"
                 routerLink="/"
             >
                 <h1 class="title">{{ title }}</h1>
             </a>
-        </div>
-        <span class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </span>
-        <div class="nav-right nav-menu">
-            <a
-                class="nav-item"
-                routerLink="/home"
-                routerLinkActive="is-active"
-            >
-                Home
-            </a>
-            <a
-                class="nav-item"
-                routerLink="/login"
-                routerLinkActive="is-active"
-            >
-                Sign in
-            </a>
-            <a
-                class="nav-item"
-                routerLink="/register"
-                routerLinkActive="is-active"
-            >
-                Sign up
-            </a>
 
-            <div class="nav-item">
-                <div class="field is-grouped">
-                    <p class="control">
-                        <a
-                            class="button is-primary"
-                            routerLink="/courses"
-                        >
-                            <span class="icon">
-                                <i class="fa fa-plus"></i>
-                            </span>
-                            <span>สร้างแผน</span>
-                        </a>
-                    </p>
+            <div class="navbar-burger burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a
+                    class="navbar-item"
+                    routerLink="/home"
+                    routerLinkActive="is-active"
+                >
+                    หน้าแรก
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <!-- <a
+                    class="nav-item"
+                    routerLink="/login"
+                    routerLinkActive="is-active"
+                >
+                    ล็อกอิน
+                </a>
+                <a
+                    class="nav-item"
+                    routerLink="/register"
+                    routerLinkActive="is-active"
+                >
+                    สมัครสมาชิก
+                </a> -->
+
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a
+                                class="button is-primary"
+                                routerLink="/courses"
+                            >
+                                <span class="icon">
+                                    <i class="fa fa-plus"></i>
+                                </span>
+                                <span>สร้างแผน</span>
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
