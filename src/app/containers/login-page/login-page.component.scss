@@ -1,0 +1,30 @@
+$login-margin: 8px;
+
+.login-page {
+  width: 100%;
+  height: 75vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .login-inputs {
+    input {
+      margin: $login-margin;
+    }
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .login-buttons {
+    button {
+      margin: $login-margin;
+    }
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}

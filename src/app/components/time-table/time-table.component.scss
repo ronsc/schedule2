@@ -1,0 +1,36 @@
+$border: 1px solid #f0f0f0;
+
+.time-table {
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: $border;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 85px;
+    height: 50px;
+    text-align: center;
+  }
+
+  th,
+  td {
+    width: 82px;
+    min-width: 82px;
+    max-width: 82px;
+  }
+}
+
+.wrapper-outer {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  .wrapper-inner {
+    display: table-cell;
+    overflow-x: auto;
+    width: 100%;
+  }
+}

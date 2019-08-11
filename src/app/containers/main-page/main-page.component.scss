@@ -1,0 +1,41 @@
+.main-page {
+  flex: 1 1;
+  display: flex;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  height: 100%;
+}
+
+.sidebar {
+  position: static;
+  padding: 0 0.5rem;
+  overflow-y: scroll;
+  width: 230px;
+  height: calc(100% - 50px);
+}
+
+.load-more {
+  padding: 1rem 0;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: cornflowerblue;
+  }
+}
+
+.main-table {
+  position: static;
+  padding: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.actions-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  // padding: 0 8px 8px 8px;
+  padding-bottom: 8px;
+}

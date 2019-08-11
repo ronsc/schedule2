@@ -1,0 +1,18 @@
+app-top-bar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+
+  &::after {
+    content: ' ';
+    height: 2px;
+    background: #e8eef2;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
