@@ -10,7 +10,7 @@ import { daysOfWeek } from '../../utils/constants';
         <table class="time-table">
           <thead>
             <tr>
-              <th>Day/Time</th>
+              <th>วัน/เวลา</th>
               <th *ngFor="let time of timeslots" colspan="2">
                 {{ time }}:00-00:00
               </th>

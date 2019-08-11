@@ -1,17 +1,79 @@
+$mo-color: #ffd600;
+$tu-color: #e91e63;
+$we-color: #8bc34a;
+$th-color: #ff9800;
+$fr-color: #03a9f4;
+$sa-color: #9c27b0;
+$su-color: #f44336;
+
 .card {
   border: 2px solid #e8eef2;
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin: 0.5rem 0;
   transition: 0.15s ease-out;
-  height: 50px;
+  min-height: 50px;
+  overflow: hidden;
+
+  div {
+    // white-space: pre-line;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 2;
+    // -webkit-box-orient: vertical;
+
+    &.title {
+      font-size: 9pt;
+      color: #000;
+      font-weight: 600;
+    }
+
+    &.subtitle {
+      font-size: 9pt;
+      color: rgb(105, 105, 105);
+      white-space: pre-line;
+    }
+  }
 
   &.clickable {
     cursor: pointer;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: 0 4px 20px rgba(#a3c2d9, 0.5);
+  }
+}
+
+.card .day-time {
+  margin-top: 2px;
+  padding: 2px 6px;
+  border-radius: 6px;
+
+  &.mo {
+    color: rgb(56, 56, 56);
+    background: $mo-color;
+  }
+  &.tu {
+    color: #fff;
+    background: $tu-color;
+  }
+  &.we {
+    color: #fff;
+    background: $we-color;
+  }
+  &.th {
+    color: #fff;
+    background: $th-color;
+  }
+  &.fr {
+    color: #fff;
+    background: $fr-color;
+  }
+  &.sa {
+    background: $sa-color;
+  }
+  &.su {
+    background: $su-color;
   }
 }

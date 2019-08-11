@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 html,
 body {
@@ -7,6 +8,8 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
+  font-size: 10pt;
+  font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-scrollbar {

@@ -1,30 +1,39 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { take } from 'rxjs/operators';
+
+import { Course } from '../../models/course';
+import { RestApiService } from '../../services/rest-api.service';
 
 @Component({
   selector: 'app-main-page',
   template: `
     <app-top-bar></app-top-bar>
     <div class="main-page">
-      <aside class="sidebar">
-        <app-search-box></app-search-box>
-
-        <ng-container *ngFor="let i of courseList">
-          <app-course-item></app-course-item>
-        </ng-container>
-
-        <div style="text-align: center;">
-          <span class="load-more" (click)="loadMore()">Load More ...</span>
+      <aside>
+        <app-search-box (searchText)="filterCourses($event)"></app-search-box>
+        <div>ค้นหาพบ : {{ (result$ | async).length | number }} รายวิชา</div>
+        <div class="sidebar">
+          <ng-container *ngFor="let c of result$ | async">
+            <app-course-item [course]="c"></app-course-item>
+          </ng-container>
         </div>
       </aside>
 
       <main class="main-table">
         <div class="actions-top">
-          <button type="button">ตารางเรียน</button>
-          <button type="button">ตารางสอบ</button>
-          <button type="button">วิชาเรียน</button>
+          <a [routerLink]="['/time-table']" routerLinkActive="active-link"
+            >ตารางเรียน</a
+          >
+          <a [routerLink]="['/exam-table']" routerLinkActive="active-link"
+            >ตารางสอบ</a
+          >
+          <a [routerLink]="['/course-table']" routerLinkActive="active-link"
+            >วิชาเรียน</a
+          >
         </div>
 
-        <app-time-table></app-time-table>
+        <router-outlet></router-outlet>
       </main>
     </div>
   `,
@@ -35,11 +44,32 @@ export class MainPageComponent implements OnInit {
     .fill(0)
     .map((_, i) => i + 1);
 
-  constructor() {}
+  courses$ = new Subject<Course[]>();
+  result$ = this.courses$.asObservable();
 
-  ngOnInit() {}
+  private courses: Course[];
 
-  loadMore() {
-    this.courseList.push(this.courseList.length + 1);
+  constructor(private restApi: RestApiService) {}
+
+  ngOnInit() {
+    this.restApi
+      .findAllCourses()
+      .pipe(take(1))
+      .subscribe(courses => {
+        this.courses = courses;
+        this.filterCourses('');
+      });
+  }
+
+  filterCourses(searchText: string): void {
+    console.log(searchText);
+
+    this.courses$.next(
+      this.courses.filter(
+        c =>
+          c.code.indexOf(searchText) !== -1 ||
+          c.name.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
+      )
+    );
   }
 }
